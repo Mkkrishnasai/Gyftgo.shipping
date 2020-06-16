@@ -11,7 +11,7 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        \App\User::create([
+        \Illuminate\Support\Facades\DB::table('users')->insert([
             'name' => 'SuperAdmin',
             'email' => 'admin@gmail.com',
             'password' => \Illuminate\Support\Facades\Hash::make('admin@123'),
